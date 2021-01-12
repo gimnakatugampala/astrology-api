@@ -2,13 +2,14 @@
     const todayBtn = document.getElementById('today');
     const tommorrowBtn = document.getElementById('tommorrow');
     const zodiacList = document.getElementById('zodiacList');
+    const generalInfo = document.getElementById('generalInfo');
 
     //Get the value when clicked the today btn
     todayBtn.addEventListener('click',function(e){
         e.preventDefault();
-        getToday(`https://json.astrologyapi.com/v1/sun_sign_prediction/daily/:${zodiacList.value}`,zodiacList.value)
+        getToday(zodiacList.value)
         .then(data => console.log(data))
-        .catch(err => console.log(err));
+        .catch(err => console.log(err))
     })
 
      //Get the value when clicked the previous btn
@@ -20,9 +21,13 @@
      //Get the value when clicked the tommorrow btn
      tommorrowBtn.addEventListener('click',function(e){
         e.preventDefault();
-        getToday(`https://json.astrologyapi.com/v1/sun_sign_prediction/daily/${zodiacList.value}:`,zodiacList.value)
-            .then(data => console.log(data))
-            .catch(err => console.log(err));
+        console.log(zodiacList.value)
+    })
+
+     //Get Genral Info
+     generalInfo.addEventListener('click',function(e){
+        e.preventDefault();
+        console.log(zodiacList.value)
     })
 
 

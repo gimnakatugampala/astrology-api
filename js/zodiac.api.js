@@ -4,19 +4,8 @@ const userId = '615417';
 //Fetch data Previous Day
 
 //Fetch data Today
-
-async function getToday(url,data){
-    const head = {
-        method:'POST',
-        headers: {
-            "authorization": "Basic " + btoa(userId+":"+apiKey),
-            "Content-Type":'application/json'
-        },
-        dataType:'json',
-        data:JSON.stringify(data)
-    }
-
-    const res = await fetch(url,head)
+async function getToday(sign){
+    const res = await fetch(`http://horoscope-api.herokuapp.com/horoscope/today/${sign}`)
     const today = await res.json();
     return today;
 }
