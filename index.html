@@ -8,7 +8,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <title>Astrology API</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Zodiax</title>
     <style>
       .btn {
         margin: 5px;
@@ -17,14 +18,14 @@
   </head>
   <body>
     <!--Navbar-->
-    <nav class="light-blue lighten-1">
+    <nav class="orange darken-4">
       <div class="nav-wrapper container">
         <a id="logo-container" href="#" class="brand-logo">Zodiax</a>
       </div>
     </nav>
 
     <!--Section : searchContent -->
-    <div class="row container" style="margin-top: 20px">
+    <div class="row container amber lighten-3" style="margin-top: 20px">
       <div class="col s12 m6">
         <div class="card-panel">
           <div class="card-content white-text">
@@ -45,13 +46,16 @@
               </select>
               <label>Choose your Zodiac Sign</label>
             </div>
-            <a class="waves-effect waves-light btn" id="previous"
+            <a class="waves-effect waves-light btn amber darken-1" id="previous"
               >Previous Day</a
             >
-            <a class="waves-effect waves-light btn" id="today">Today</a>
-            <a class="waves-effect waves-light btn" id="tommorrow">Tommorrow</a>
-            <a class="waves-effect waves-light btn" id="generalInfo"
-              >Get General Info</a
+            <a class="waves-effect waves-light btn amber darken-1" id="today"
+              >Today</a
+            >
+            <a
+              class="waves-effect waves-light btn amber darken-1"
+              id="tommorrow"
+              >Tommorrow</a
             >
           </div>
         </div>
@@ -59,30 +63,48 @@
     </div>
 
     <!--futher : details-->
-    <div class="container" id="results-f">
-      <ul class="collection with-header">
-        <li class="collection-header"><h4>First Names</h4></li>
-        <li class="collection-item">Alvin</li>
-        <li class="collection-item">Alvin</li>
-        <li class="collection-item">Alvin</li>
-        <li class="collection-item">Alvin</li>
-      </ul>
+    <div class="container" id="results">
+      <!-- <ul class="collection with-header">
+        <li class="collection-header"><h4>Libra</h4></li>
+        <li class="collection-item">Current Date:</li>
+        <li class="collection-item">Lucky Number:</li>
+        <li class="collection-item">Lucky Time:</li>
+        <li class="collection-item">Color:</li>
+        <li class="collection-item">Date Range:</li>
+        <li class="collection-item">Mood:</li>
+        <li class="collection-item">Description:</li>
+      </ul> -->
     </div>
 
-    <!--Simple : detail-->
-    <div class="container" id="results-l">
-      <ul class="collection with-header">
-        <li class="collection-header"><h4>First Names</h4></li>
-        <li class="collection-item">Alvin</li>
-        <li class="collection-item">Alvin</li>
-        <li class="collection-item">Alvin</li>
-        <li class="collection-item">Alvin</li>
-      </ul>
+    <div class="section orange darken-4">
+      <div class="container white-text center">
+        Gimna Katugampala Production
+      </div>
     </div>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/zodiac.api.js"></script>
     <script src="js/index.js"></script>
+
+    <script>
+      window.sr = ScrollReveal();
+      sr.reveal("nav", {
+        duration: 2000,
+        origin: "top",
+      });
+
+      sr.reveal(".card-panel", {
+        duration: 2000,
+        origin: "right",
+        distance: "300px",
+      });
+
+      sr.reveal(".section", {
+        duration: 2000,
+        origin: "bottom",
+        distance: "300px",
+      });
+    </script>
   </body>
 </html>
