@@ -3,9 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <title>Astrology API</title>
+    <style>
+      .btn {
+        margin: 5px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Astrology</h1>
+    <!--Navbar-->
+    <nav class="light-blue lighten-1">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Zodiax</a>
+      </div>
+    </nav>
+
+    <!--Section : searchContent -->
+    <div class="row container" style="margin-top: 20px">
+      <div class="col s12 m6">
+        <div class="card-panel">
+          <div class="card-content white-text">
+            <div class="input-field">
+              <select id="zodiacList">
+                <option value="aries" selected>Aries</option>
+                <option value="taurus">Taurus</option>
+                <option value="gemini">Gemini</option>
+                <option value="cancer">Cancer</option>
+                <option value="leo">Leo</option>
+                <option value="virgo">Virgo</option>
+                <option value="libra">Libra</option>
+                <option value="scorpio">Scorpio</option>
+                <option value="sagittarius">Sagittarius</option>
+                <option value="capricorn">Capricorn</option>
+                <option value="aquarius">Aquarius</option>
+                <option value="pisces">Pisces</option>
+              </select>
+              <label>Choose your Zodiac Sign</label>
+            </div>
+            <a class="waves-effect waves-light btn" id="previous"
+              >Previous Day</a
+            >
+            <a class="waves-effect waves-light btn" id="today">Today</a>
+            <a class="waves-effect waves-light btn" id="tommorrow">Tommorrow</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/zodiac.api.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
