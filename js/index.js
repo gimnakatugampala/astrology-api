@@ -6,7 +6,7 @@
     //Get the value when clicked the today btn
     todayBtn.addEventListener('click',function(e){
         e.preventDefault();
-        getToday(`https://json.astrologyapi.com/v1/sun_sign_prediction/daily/${zodiacList.value}:`,zodiacList.value)
+        getToday(`https://json.astrologyapi.com/v1/sun_sign_prediction/daily/:${zodiacList.value}`,zodiacList.value)
         .then(data => console.log(data))
         .catch(err => console.log(err));
     })
